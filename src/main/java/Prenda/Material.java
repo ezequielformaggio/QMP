@@ -1,4 +1,4 @@
-package PrendaTest;
+package Prenda;
 
 public enum Material {
   ALGODON,

@@ -1,4 +1,4 @@
-package PrendaTest;
+package Prenda;
 
 public class TipoPrenda {
   Categoria categoria;
