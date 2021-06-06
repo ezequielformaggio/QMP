@@ -2,12 +2,22 @@ package Persona;
 
 import Guardarropa.Guardarropa;
 import Prenda.Prenda;
+import Uniforme.Uniforme;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Persona {
   List<Prenda> prendas = new ArrayList<>();
+  List<Uniforme> uniformesSugeridos = new ArrayList<Uniforme>();
+
+  public void sugerirUniforme(Persona persona, Uniforme uniforme){
+    persona.uniformesSugeridos.add(uniforme);
+  }
+
+  /*
+
+  QMP5
   List<Guardarropa> guardarropas = new ArrayList<>();
   List<Prenda> sugerenciasParaAgregar = new ArrayList<>();
   List<Prenda> sugerenciasParaQuitar = new ArrayList<>();
@@ -43,5 +53,5 @@ public class Persona {
   public void deshacerSugerencia(Prenda prenda){
     this.prendas.remove(prenda);
   }
-
+*/
 }

@@ -15,7 +15,9 @@ public class Prenda {
     this.colorPrincipal = requireNonNull(colorPrincipal, "color principal es obligatorio");
     this.tipoPrenda = requireNonNull(tipoPrenda, "tipo de prenda es obligatorio");
     this.colorSecundario = colorSecundario;
-    this.trama = trama;
+    if(trama == null) {
+      this.trama = Trama.LISA;
+    } else this.trama = trama;
   }
 
   public Categoria getCategoria() {
