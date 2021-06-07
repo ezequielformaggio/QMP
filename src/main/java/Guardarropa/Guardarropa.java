@@ -3,7 +3,6 @@ package Guardarropa;
 import Atuendo.Atuendo;
 import Atuendo.GeneradorDeAtuendo;
 import Clima.AccuWeatherAPI;
-import Persona.Persona;
 import Prenda.Prenda;
 
 import java.util.ArrayList;
@@ -14,9 +13,7 @@ public class Guardarropa {
   private AccuWeatherAPI clima;
   private CriterioSeparacion criterio;
   private GeneradorDeAtuendo generadorDeAtuendo;
-  private List<Persona> personas = new ArrayList<>();
   private List<Prenda> prendas = new ArrayList<>();
-
 
   public Guardarropa(CriterioSeparacion criterio) {
     this.criterio = criterio;
@@ -27,7 +24,6 @@ public class Guardarropa {
   }
 
   public List<Prenda> obtenerPrendasSegunClima(){
-
     Double temperatura = clima.getTemperatura("Buenos Aires, Argentina");
     return this.prendas
         .stream()
@@ -35,10 +31,12 @@ public class Guardarropa {
         .collect(Collectors.toList());
   }
 
-
-  /* public void compartirCon(Persona persona) {
-    personas.add(persona);
+  public void agregarPrenda(Prenda prenda){
+    this.prendas.add(prenda);
   }
-  */
+
+  public void quitarPrenda(Prenda prenda){
+    this.prendas.remove(prenda);
+  }
 
 }

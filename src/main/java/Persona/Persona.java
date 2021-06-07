@@ -1,57 +1,46 @@
 package Persona;
 
-
 import Atuendo.Atuendo;
 import Guardarropa.Guardarropa;
+import Sugerencia.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Persona {
-  List<Guardarropa> guardarropas;
-  List<Atuendo> atuendosSugeridos = new ArrayList<>();
+  private List<Guardarropa> guardarropas;
+  private List<Atuendo> atuendosSugeridos = new ArrayList<>();
+  private List<Sugerencia> sugerencias = new ArrayList<>();
+  private List<Sugerencia> sugerenciasEjecutadas = new ArrayList<>();
 
   public List<Atuendo> getAtuendosSugeridos() {
     return atuendosSugeridos;
   }
 
-  /*
-
-  QMP5
-  List<Guardarropa> guardarropas = new ArrayList<>();
-  List<Prenda> sugerenciasParaAgregar = new ArrayList<>();
-  List<Prenda> sugerenciasParaQuitar = new ArrayList<>();
-
-  public void compartirGuardarropaCon(Persona persona,Guardarropa guardarropa) {
+  public void compartirGuardarropa(Persona persona, Guardarropa guardarropa) {
     persona.guardarropas.add(guardarropa);
   }
 
-  public void sugerirAgregarPrenda(Persona persona,Prenda prenda){
-    persona.sugerenciasParaAgregar.add(prenda);
+  public void sugerirPrenda(Sugerencia sugerencia){
+    sugerencias.add(sugerencia);
   }
 
-  public void sugerirQuitarPrenda(Persona persona,Prenda prenda){
-    persona.sugerenciasParaQuitar.add(prenda);
+  public void aceptarSugerencia(Sugerencia sugerencia) {
+    sugerencia.ejecutarSugerencia(this);
+    sugerenciasEjecutadas.add(sugerencia);
+    sugerencias.remove(sugerencia);
   }
 
-  public void aceptarSugerenciaAgregar(Prenda prendaSugerida){
-    this.prendas.add(prendaSugerida);
+  public void rechazarSugerencia(Sugerencia sugerencia) {
+    sugerencias.remove(sugerencia);
   }
 
-  public void aceptarSugerenciaQuitar(Prenda prendaSugerida){
-    this.prendas.remove(prendaSugerida);
+  public void deshacerSugerenciaEjecutada(Sugerencia sugerencia) {
+    sugerencia.deshacerSugerencia(this);
   }
 
-  public List<Prenda> verSugerenciasAAgregar(){
-    return sugerenciasParaAgregar;
+  public List<Sugerencia> getSugerencias() {
+    return sugerencias;
   }
 
-  public List<Prenda> verSugerenciasAQuitar(){
-    return sugerenciasParaQuitar;
-  }
-
-  public void deshacerSugerencia(Prenda prenda){
-    this.prendas.remove(prenda);
-  }
-*/
 }

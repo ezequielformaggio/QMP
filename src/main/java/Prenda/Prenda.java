@@ -1,7 +1,5 @@
 package Prenda;
 
-import Clima.Clima;
-
 import static java.util.Objects.requireNonNull;
 
 public class Prenda {
