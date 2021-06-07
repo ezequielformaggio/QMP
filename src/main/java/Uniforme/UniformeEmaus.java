@@ -4,7 +4,6 @@ import Prenda.*;
 
 public class UniformeEmaus implements CreadorUniformes{
 
-  // será una camisa blanca, pantalón de vestir negro y zapatos negros)
   @Override
   public Prenda fabricarParteSuperior() {
     TipoPrenda chomba = new TipoPrenda(Categoria.PARTE_SUPERIOR);
