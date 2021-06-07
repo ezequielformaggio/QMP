@@ -1,19 +1,15 @@
 package Persona;
 
+
 import Atuendo.Atuendo;
-import Atuendo.GeneradorDeAtuendo;
 import Guardarropa.Guardarropa;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Persona {
-  Guardarropa guardarropa;
+  List<Guardarropa> guardarropas;
   List<Atuendo> atuendosSugeridos = new ArrayList<>();
-
-  public void sugerirAtuendo(Persona persona, Atuendo atuendo){
-    persona.atuendosSugeridos.add(atuendo);
-  }
 
   public List<Atuendo> getAtuendosSugeridos() {
     return atuendosSugeridos;

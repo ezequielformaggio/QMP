@@ -1,5 +1,7 @@
 package Prenda;
 
+import Clima.Clima;
+
 import static java.util.Objects.requireNonNull;
 
 public class Prenda {
@@ -22,6 +24,10 @@ public class Prenda {
 
   public Categoria getCategoria() {
     return tipoPrenda.getCategoria();
+  }
+
+  public Boolean validarTemperatura(Double temperaturaActual){
+    return tipoPrenda.getTemperaturaMaxima() <= temperaturaActual;
   }
 
 }
