@@ -1,7 +1,0 @@
-
-QMP3
-
-- Tome la desicion de borrar como estaban implementados los uniformes, ya que al agregar un nuevo requerimiento
-  relacionado con la creacion de atuendos, tenerlo separado de los uniformes pierde sentido, ya que estos
-  tambien son atuendos, por lo cual cree una clase generador de atuendo abstracta, de la cual se pueden
-  instanciar otras clases que creen uniformes como sea que los necesiten
