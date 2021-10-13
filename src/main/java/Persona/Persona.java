@@ -29,7 +29,7 @@ public class Persona {
   }
 
   public void aceptarSugerencia(Sugerencia sugerencia) {
-    sugerencia.ejecutarSugerencia(this);
+    sugerencia.ejecutar(this);
     sugerenciasEjecutadas.add(sugerencia);
     sugerencias.remove(sugerencia);
   }
@@ -39,7 +39,7 @@ public class Persona {
   }
 
   public void deshacerSugerenciaEjecutada(Sugerencia sugerencia) {
-    sugerencia.deshacerSugerencia(this);
+    sugerencia.deshacer(this);
   }
 
   public List<Sugerencia> getSugerencias() {
@@ -57,6 +57,7 @@ public class Persona {
   public List<MediosDeComunicacion> getMediosDeComunicacion() {
     return mediosDeComunicacion;
   }
+
   public void lanzarNotificacion(InformeDelClima informeDelClima){
     if(informeDelClima.pronostico.contains("HAIL")){
       //NotificationService.notify("Se le notifica que habra una posible caida de granizo, evite salir en auto");

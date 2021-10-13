@@ -14,12 +14,12 @@ public class SugerenciaQuitarPrenda implements Sugerencia {
   }
 
   @Override
-  public void ejecutarSugerencia(Persona persona){
+  public void ejecutar(Persona persona){
     guardarropa.quitarPrenda(prenda);
   }
 
   @Override
-  public void deshacerSugerencia(Persona persona) {
+  public void deshacer(Persona persona) {
     guardarropa.agregarPrenda(prenda);
   }
 }

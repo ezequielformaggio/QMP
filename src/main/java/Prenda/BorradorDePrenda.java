@@ -10,15 +10,15 @@ public class BorradorDePrenda {
   private Trama trama;
 
   public void setTipoPrenda(TipoPrenda tipoPrenda){
-    this.tipoPrenda = requireNonNull(tipoPrenda, "tipo de prenda es obligatorio");;
+    this.tipoPrenda = requireNonNull(tipoPrenda, "tipo de prenda es obligatorio");
   }
 
   public void setMaterial(Material material){
-    this.material = requireNonNull(material, "material es obligatorio");;
+    this.material = requireNonNull(material, "material es obligatorio");
   }
 
   public void setColorPrincipal(Color color){
-    this.colorPrincipal = requireNonNull(colorPrincipal, "color principal es obligatorio");;
+    this.colorPrincipal = requireNonNull(color, "color principal es obligatorio");
   }
 
   public void setColorSecundario(Color color){
@@ -26,7 +26,9 @@ public class BorradorDePrenda {
   }
 
   public void setTrama(Trama trama) {
-    this.trama = trama;
+    if(trama == null) {
+      this.trama = Trama.LISA;
+    } else this.trama = trama;
   }
 
   public Prenda crearPrenda(){

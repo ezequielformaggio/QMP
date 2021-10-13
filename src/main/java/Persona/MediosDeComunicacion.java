@@ -1,8 +1,7 @@
 package Persona;
 
-public enum MediosDeComunicacion {
-  MAIL,
-  NOTIFICACION,
-  RECALCULO
+import Clima.InformeDelClima;
 
+public interface MediosDeComunicacion {
+  void notificarActualizacionRecibida(InformeDelClima informeDelClima, Persona persona);
 }
